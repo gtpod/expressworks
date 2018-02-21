@@ -4,4 +4,6 @@ var thepage = process.argv[3]
 var path = require('path')
 var app = express()
 
-app.use(
+app.use(express.static(thepage||path.join(__dirname, 'public')));
+
+app.listen(theport)
